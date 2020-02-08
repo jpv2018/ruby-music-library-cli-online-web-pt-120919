@@ -28,7 +28,7 @@ class Song
   end
   
   def save 
-    @@all << self
+    @@all << self unless Song.all.include?(self)
   end
   
   def initialize(name, artist=nil, genre=nil)
